@@ -6,10 +6,8 @@ const config = require('./config.json');
 const client_secret = require('./client_secret.json');
 const dash_button = require('node-dash-button');
 // TODO: accept and register an array of button MACs
-const dash = dash_button(config.button.id, 'en0',2000, 'all');
+const dash = dash_button(config.button.id, 'wlan0',2000, 'all');
 const util = require('util');
-const _ = require('lodash');
-const when = require('when');
 
 
 function sendMail (to, from, message) {
