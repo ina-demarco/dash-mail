@@ -1,6 +1,6 @@
 # dash-mail
-<b>Press your Amazon Dash Button to send a mail with nodemailer over Gmail.</b><br/>
-How it works: On button press, the Amazon Dash Button connects to the Wi-Fi to get ready for placing an order. It sends an UPD or ARP packet (depending on the model) to the network to ensure that no other device uses it's IP address. This packet can be discovered by other devices in this network (for example a Raspberry Pi), which then can react to the button press.
+<b>Press your Amazon Dash Button to send a mail with Nodemailer over Gmail.</b><br/>
+How it works: On button press, the Amazon Dash Button connects to the Wi-Fi to get ready for placing an order. It sends an UPD or ARP packet (depending on the model) to the network to ensure that no other device uses it's IP address. This packet can be discovered by other devices in this network (for example a Raspberry Pi), which then can react to the button press. This code uses Nodemailer (a Node.js module) to send a mail. 
 
 <b>Prerequisites</b><br/>
 Node.js <br/>
@@ -31,3 +31,7 @@ Node.js modules: Nodemailer (https://nodemailer.com/about/) and node-dash-button
 7. Run server.js code:
 <br>node server.js
 
+
+-----
+<b> Credits to: </b>
+Ashutosh Sanzgiri https://github.com/sanzgiri/dash-sms
