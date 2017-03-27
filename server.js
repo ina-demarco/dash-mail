@@ -1,18 +1,23 @@
-
 let nodemailer = require("nodemailer");
-
-
 const config = require('./config.json');
 const client_secret = require('./client_secret.json');
 const dash_button = require('node-dash-button');
-// TODO: accept and register an array of button MACs
-const dash = dash_button(config.button.id, 'wlan0',2000, 'all');
-const util = require('util');
 
+//change the input params according to your desired settings
+//first param: single mac or array of button mac addesses, second: network interface to listen (wlan0, en0,..), third: timeout between recognized presses, forth: type of package to listen for (all, udp, arp)
+const dash = dash_button(config.button.id, 'en0', 2000, 'all');
 
-function sendMail (to, from, message) {
-    console.log("in send mail")
+console.log('waiting for dash button to be pressed...');
+dash.on('detected', () => {
+    console.log('Dash button press detected!');
+    sendMail(config.mail.to, config.mail.from, config.mail.subject, config.mail.body)
+});
 
+function sendMail(to, from, subject, message) {
+    console.log("trying to send mail")
+
+    //create a transport with the given credentials
+    //instead of configuring the tokens beforehand, it is also possible to get them at runtime, see https://developers.google.com/gmail/api/quickstart/nodejs
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -29,30 +34,17 @@ function sendMail (to, from, message) {
     var mailOptions = {
         from: from,
         to: to,
-        subject: "Dash Button Test",
+        subject: subject,
         generateTextFromHTML: true,
-        html: "<b>"+config.mail.body+"</b>"
+        html: "<b>" + config.mail.body + "</b>"
     };
 
-    transporter.sendMail(mailOptions, function(error, response) {
+    transporter.sendMail(mailOptions, function (error, response) {
         if (error) {
-            console.log(error);
+            console.log("ERROR: " +error);
         } else {
             console.log(response);
         }
         transporter.close();
     });
 }
-
-
-console.log('waiting for dash button to be pressed...');
-
-
-dash.on('detected', () => {
-    console.log('Dash button detected!');
-    // for now we can ignore the promise as it handles any logging and we've no need to care about when it resolves or rejects
-    sendMail(config.mail.to, config.mail.from, config.mail.body)
-});
-
-
-
