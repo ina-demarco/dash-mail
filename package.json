@@ -4,7 +4,8 @@
   "description": "Press Amazon Dash button to send mail. Credits to Ashutosh Sanzgiri (https://github.com/sanzgiri/dash-sms)",
   "main": "server.js",
   "dependencies": {
-    "node-dash-button": "^0.5.0"
+    "node-dash-button": "^0.5.5",
+    "nodemailer": "^3.1.8"
   },
   "devDependencies": {
     "node-dev": "^3.1.3"
