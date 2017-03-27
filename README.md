@@ -14,7 +14,6 @@ Node.js modules: Nodemailer (https://nodemailer.com/about/) and node-dash-button
 3. Check the Dash Button's MAC Address by using Wireshark (or similar) and write it in the config.json file
 
 4. Credentials for sending mails with Nodemailer over Gmail (this uses OAuth2.0 tokens, but you can also modify the code to use different mail provider and/or a password instead), for detailed instructions also see http://masashi-k.blogspot.de/2013/06/sending-mail-with-gmail-using-xoauth2.html
-
 <br>Set up a Gmail account to send the mails from (or use your own)
 <br>Create a project via Google API Developer Console (https://console.developers.google.com/apis/) and configure the OAuth2.0 credentials
 <br>Get the AOuth2.0 Access Token  and add the tokens to the config.json. Download your credentials and name then "client_secret.json". 
