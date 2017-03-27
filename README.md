@@ -28,6 +28,6 @@ Node.js modules: Nodemailer (https://nodemailer.com/about/) and node-dash-button
 
 6. Check the rest of your config.json (mail subject, body, recipient)
 
-7. Run server.js code
+7. Run server.js code:
 <br>node server.js
 
