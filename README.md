@@ -34,4 +34,5 @@ Node.js modules: Nodemailer (https://nodemailer.com/about/) and node-dash-button
 
 -----
 <b> Credits to: </b>
-Ashutosh Sanzgiri https://github.com/sanzgiri/dash-sms
+<br>Ashutosh Sanzgiri https://github.com/sanzgiri/dash-sms
+<br>Alex Hortin https://github.com/hortinstein/node-dash-button
