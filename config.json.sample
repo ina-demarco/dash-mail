@@ -4,7 +4,7 @@
   },
   "mail": {
     "from": "your.address@googlemail.com",
-    "to": "another.address@googlemail.com",
+    "to": "another.address@provider.com",
     "body": "This was sent by pressing a dash button!",
     "subject":"Dash Button was pressed!",
     "refreshtoken": "INSERTREFRESHTOKENHERE",
