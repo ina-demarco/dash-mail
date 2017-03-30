@@ -23,14 +23,14 @@ Node.js modules: Nodemailer (https://nodemailer.com/about/) and node-dash-button
 <br/>Install Node Package Manager for easy installation of Node.js modules
 <br/>Switch to the destination folder
 <br/>Install nodemailer and node-dash-button with the Node Package Manager:
-<br>Execute 'npm install', the Node Package Manager should read all dependencies from package.json and install them. Alternatively install them one-by-one:
-<br/>'npm install nodemailer'
-<br/>'npm install node-dash-button' (requirement: libpcap, for installation details also see https://github.com/hortinstein/node-dash-button)
+<br>Execute ```npm install```, the Node Package Manager should read all dependencies from package.json and install them. Alternatively install them one-by-one:
+<br/>```npm install nodemailer```
+<br/>```npm install node-dash-button``` (requirement: libpcap, for installation details also see https://github.com/hortinstein/node-dash-button)
 
 6. Check the rest of your config.json (mail subject, body, recipient)
 
 7. Run server.js code: (sudo may be required)
-<br>'node server.js'
+<br>```node server.js```
 
 
 -----
